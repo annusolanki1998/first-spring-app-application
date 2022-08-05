@@ -35,4 +35,14 @@ public class HelloWorldSpringAppApplicationController {
         return user.toString();
 
     }
+
+    @PutMapping("/updateuser")
+    public String updateUser(@RequestParam String firstName, @RequestParam String lastName) {
+        User user = new User();
+        user.setFirstName("Annu");
+        user.setLastName("Solanki");
+        user.setFirstName(firstName);
+        user.setLastName(lastName);
+        return user.toString();
+    }
 }
