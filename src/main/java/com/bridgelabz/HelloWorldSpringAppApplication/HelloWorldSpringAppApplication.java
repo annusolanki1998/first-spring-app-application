@@ -1,4 +1,4 @@
-package com.bridgelabz.HelloWorldSpringAppApplication;
+package com.bridgelabz.helloworldspringappapplication;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
