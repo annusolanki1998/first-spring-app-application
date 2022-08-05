@@ -1,6 +1,7 @@
 package com.bridgelabz.helloworldspringappapplication.controller;
 
 
+import com.bridgelabz.helloworldspringappapplication.dto.User;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
@@ -17,8 +18,21 @@ public class HelloWorldSpringAppApplicationController {
     }
 
     @GetMapping("/path/{name}")
-    public String name(@PathVariable String name){
+    public String name(@PathVariable String name) {
         return "Hello " + name + " from Bridgelabz";
     }
 
+    @PostMapping("/adduser")
+    public String addUser(@RequestBody User user) {
+        return user.toString();
+    }
+
+    @PostMapping("/adduserparam")
+    public String addUserParam(@RequestParam String firstName, @RequestParam String lastName) {
+        User user = new User();
+        user.setFirstName(firstName);
+        user.setLastName(lastName);
+        return user.toString();
+
+    }
 }
